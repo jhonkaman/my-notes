@@ -9,7 +9,7 @@
 </template>
 ```
 
-## Multiple roots
+### Multiple roots
 ```vue
 <template>
   <h1>Hello John</h1>
