@@ -4,7 +4,6 @@
 
 ### Hello World
 ```vue
-<!-- HelloWorld.vue -->
 <template>
   <h1>Hello World</h1>
 </template>
@@ -12,7 +11,6 @@
 
 ## Multiple roots
 ```vue
-<!-- HelloWorld.vue -->
 <template>
   <h1>Hello John</h1>
   <p>Lorem ipsum dolor...</p>
@@ -20,8 +18,7 @@
 ```
 
 ### Import
-```vue {3,7}
-<!-- App.vue -->
+```vue
 <script setup>
 import HelloWorld from './components/HelloWorld';
 </script>
@@ -33,20 +30,17 @@ import HelloWorld from './components/HelloWorld';
 
 ### Slots
 
-```vue {3}
-<!-- HelloWorld.vue -->
+```vue
 <template>
   <slot />
 </template>
 ```
-```vue {3}
-<!-- HelloWorld.vue -->
+```vue
 <template>
   <slot></slot>
 </template>
 ```
-```vue {7}
-<!-- App.vue -->
+```vue
 <script setup>
 import HelloWorld from './components/HelloWorld';
 </script>
@@ -56,15 +50,13 @@ import HelloWorld from './components/HelloWorld';
 </template>
 ```
 ---
-```vue {3}
-<!-- HelloWorld.vue -->
+```vue
 <template>
   <slot>Fallback content</slot>
 </template>
 ```
 
-```vue {7}
-<!-- App.vue -->
+```vue
 <script setup>
 import HelloWorld from './components/HelloWorld';
 </script>
@@ -78,8 +70,7 @@ import HelloWorld from './components/HelloWorld';
 
 ### style attribute
 
-```vue "style="color: red;""
-<!-- HelloWorld.vue -->
+```vue
 <template>
   <h1 style="color: red;">Hello World</h1>
   <p>Lorem ipsum dolor...</p>
@@ -88,8 +79,7 @@ import HelloWorld from './components/HelloWorld';
 
 ### style element
 
-```vue {7-11}
-<!-- HelloWorld.vue -->
+```vue
 <template>
   <h1>Hello World</h1>
   <p>Lorem ipsum dolor...</p>
@@ -104,8 +94,7 @@ h1 {
 
 ### class attribute
 
-```vue "class="heading"" ".heading"
-<!-- HelloWorld.vue -->
+```vue
 <template>
   <h1 class="heading">Hello World</h1>
 </template>
@@ -120,8 +109,7 @@ h1 {
 ## JS
 
 ### Variable
-```vue {3, 7}
-<!-- Counter.vue -->
+```vue
 <script setup>
 const count = 0;
 </script>
@@ -132,7 +120,6 @@ const count = 0;
 ```
 
 ```vue
-<!-- Counter.vue -->
 <script setup>
 import { ref } from 'vue';
 const count = ref(0);
@@ -144,8 +131,7 @@ const count = ref(0);
 ```
 
 ### Shorthand
-```vue "@"
-<!-- Counter.vue -->
+```vue
 <script setup>
 import { ref } from 'vue';
 const count = ref(0);
@@ -157,8 +143,7 @@ const count = ref(0);
 ```
 
 ### Use function
-```vue {6-8, 12}
-<!-- Counter.vue -->
+```vue
 <script setup>
 import { ref } from 'vue';
 const count = ref(0);
@@ -174,8 +159,7 @@ function increment() {
 ```
 
 ### Conditionals
-```vue {13}
-<!-- Counter.vue -->
+```vue
 <script setup>
 import { ref } from 'vue';
 const count = ref(0);
@@ -195,7 +179,6 @@ function increment() {
 
 ### List
 ```vue
-<!-- ListExample.vue -->
 <script setup>
 let id = 0;
 
@@ -217,7 +200,6 @@ const todos = [
 
 ### v-model
 ```vue
-<!-- ListExample.vue -->
 <script setup>
 import { ref } from 'vue';
 let id = 0;
@@ -248,7 +230,6 @@ function addTodo() {
 
 ### Props
 ```vue
-<!-- HelloWorld.vue -->
 <script setup>
 const props = defineProps(['name'])
 </script>
@@ -259,7 +240,6 @@ const props = defineProps(['name'])
 ```
 
 ```vue
-<!-- HelloWorld.vue -->
 <script setup>
 const props = defineProps({
   name: String
@@ -272,7 +252,6 @@ const props = defineProps({
 ```
 
 ```vue
-<!-- App.vue -->
 <script setup>
 import HelloWorld from './components/HelloWorld';
 </script>
